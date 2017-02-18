@@ -10,9 +10,7 @@ We hope to assign the following:
 - An encoder to encode "German" messages. Schnell!
   - There will be a "create rotor" to make a rotor.
   - There will be an encode.
-- Perhaps a checker function. We will have to research the 1940s implementation. We cannot trivially implement the Stecker so that would not exist.
-  - We would include a code cracker with a small dictionary.
-  - 
+  - There will be a decode.
 
 #Why this assignment?
 
@@ -22,11 +20,13 @@ We believe that data structures (among introductory classes), should have projec
 
 We will use weather reports in English for the messages so that the potential words will be fewer.
 
-#The structure
+#The structure (and details)
 
 The following classes will exist:
 - A rotor class
-  - Create rotor will be here.
+  - Create rotor will be here. (Char [] -> Circular linked list)
 - An enigma class
-  - Encrypt will be here.
-- A driver with a decrypt.
+  - Rotors would have to move to a start state. (Init with 3 rotors and 3 chars for the starting state.)
+  - Encrypt will be here. This would take messages as a linked-list of chars and output an encoded copy.
+  - Decode will be here to decode given a state.
+  
