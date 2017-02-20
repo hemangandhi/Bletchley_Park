@@ -10,6 +10,16 @@ public class Rotor{
     }
 
     /*
+     * Get the encoded char for a given char.
+     **/
+    public char encodeOne(char enc){}
+    
+    /*
+     * Get the decoded char for a given char.
+     **/
+    public char decodeOne(char dec){}
+
+    /*
      * Rotates the rotor once.
      * @return: Returns true if and only if the rotor has completed a full
      * circle.

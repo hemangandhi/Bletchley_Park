@@ -6,7 +6,7 @@ public class Enigma{
      * Make an enigma.
      * This will set the rotors to a particular state too. 
      **/
-    public Enigma(Rotor r1, Rotor r2, Rotor r3, char state1, char state2, char state3){}
+    public Enigma(Rotor reflector, Rotor r1, Rotor r2, Rotor r3, char state1, char state2, char state3){}
 
     /*
      * Encrypt the provided string. The string will be a linked list of characters.
@@ -19,11 +19,4 @@ public class Enigma{
      * Alters the internal state to reset the rotors.
      **/
     public void reset(){}
-    
-    /*
-     * Decrypt the provided string. The string will be a linked list of characters.
-     * @param in: the string to encode as a linked list.
-     * @return: the decrypted string as a linked list.
-     **/
-    public LinkedList<Character> decrypt(LinkedList<Character> in){}
 }
