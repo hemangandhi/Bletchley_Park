@@ -1,6 +1,6 @@
 
 \documentclass[11pt]{article}
-\usepackage{hyperref}
+\usepackage{hyperref, wrapfig}
 
 \title{Engima Assignment}
 
@@ -30,18 +30,35 @@ You will be expected to encrypt and decrypt the messages from English
 
 \section{The Code Expected}
 Here are the expectations for the submission. Relevant parts of the enigma are explained.
-\textbf{You are not expected to develop a full enigma emulator - read below for details.}
 
 This is divided by class for convenience. A point-breakdown is provided at the end of this section.
 
 \subsection{The Rotor Class - Constructor}
-A rotor represents a rotor of the Enigma machine. The rotor mapped the alpha-numeric characters to other ones. An example is below:
-
-\begin{tabular}{l | l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l}
-  Original & A & B & C & D & E & F & G & H & I & J & K & L & M & N & O & P & Q & R & S & T & U & V & W & X & Y & Z & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 0 \\
-  \hline
-  Encrypted & S & 6 & R & 3 & M & T & O & 5 & 8 & 0 & G & Q & W & J & P & H & 4 & Z & E & C & 1 & 2 & 7 & D & N & V & Y & L & B & I & 9 & F & A & X & K & U \\
+\begin{wraptable}{l}{9cm}
+  \caption{An example rotor mapping}
+\begin{tabular}{c | c | c | c}
+  Original & Encrypted & Original & Encrypted \\ \hline
+  A  & S &  S  & E \\
+  B  & 6 &  T  & C \\
+  C  & R &  U  & 1 \\
+  D  & 3 &  V  & 2 \\
+  E  & M &  W  & 7 \\
+  F  & T &  X  & D \\
+  G  & O &  Y  & N \\
+  H  & 5 &  Z  & V \\
+  I  & 8 &  0  & Y \\
+  J  & 0 &  1  & L \\
+  K  & G &  2  & B \\
+  L  & Q &  3  & I \\
+  M  & W &  4  & 9 \\
+  N  & J &  5  & F \\
+  O  & P &  6  & A \\
+  P  & H &  7  & X \\
+  Q  & 4 &  8  & K \\
+  R  & Z &  9  & U \\
 \end{tabular}
+\end{wraptable}
+A rotor represents a rotor of the Enigma machine. The rotor mapped the alpha-numeric characters to other ones. An example is on the left.
 
 This rotor will be contructed by providing the \texttt{char} array:\\
 \texttt{char [] rotor = \{'S', '6', 'R', '3', 'M', 'T', 'O', '5', '8', '0', 'G', 'Q', 'W', 'J', 'P',
@@ -50,7 +67,7 @@ This rotor will be contructed by providing the \texttt{char} array:\\
 }
 
 The code should be above to make multiple rotors. In general, the first value will map to A and so until
-until the $27^{th}$ which will map to 1 and the final one which will map to 0. 
+the $27^{th}$ which will map to 1 and the final one which will map to 0. 
 
 For encryption convenience, the \texttt{char} array
 should be converted to a circular linked list with the head as the first value (that maps to A).
