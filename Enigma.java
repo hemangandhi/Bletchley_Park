@@ -1,3 +1,9 @@
+/**
+ * AUTHOR: Heman Gandhi, Douglas Rudolph
+ * PROPOSAL: Data Structures - 112 - Assignment 1
+ * DATE: March 24
+ * FILE: Enigma.java
+ */
 import java.util.LinkedList;
 
 public class Enigma{
